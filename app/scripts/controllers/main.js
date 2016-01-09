@@ -18,4 +18,6 @@ angular.module('bootstrapLearningApp')
      $scope.isActive = function(route) {
         return route === $location.path();
     }
+
+    $scope.model="This is model";
   });

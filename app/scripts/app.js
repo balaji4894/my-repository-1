@@ -31,6 +31,12 @@ angular
         controllerAs: '',
         activetab:'tabledemo'
       })
+      .when('/wkcg', {
+        templateUrl: 'views/wkcg.html',
+        controller:'WkcgCtrl',
+        controllerAs:'wkcg',
+        activetab:'wkcg'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
