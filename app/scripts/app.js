@@ -27,8 +27,8 @@ angular
       })
       .when('/tabledemo', {
         templateUrl: 'views/tableDemo.html',
-        controller: '',
-        controllerAs: '',
+        controller: 'tableDemoCtrl',
+        controllerAs: 'tableDemo',
         activetab:'tabledemo'
       })
       .when('/wkcg', {
