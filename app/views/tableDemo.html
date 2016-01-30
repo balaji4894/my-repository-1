@@ -2,7 +2,7 @@
 	<div class="col-md-10">
 		<div class="panel panel-info">
 			<div class="panel-heading"> <label>City Pickup</label></div>
-			<div class="panel-body">
+			<div class="panel-body form-group">
 				<table class="table table-hover table-striped col-md-9">
 					<thead>
 						<tr>
@@ -14,18 +14,21 @@
 					<tbody>
 						<tr ng-repeat="row in tableDemo.rows">
 							<td>
-								<select ng-model="row.country" ng-change="row.states=tableDemo.findStates(row.country);row.cities=[]">
+								<select class="form-control" ng-model="row.country" ng-change="row.states=tableDemo.findStates(row.country);row.cities=[]">
 									<option ng-repeat="data in tableDemo.city.cities">{{data.country}}</option>
+									<option></option>
 								</select>
 							</td>
 							<td>
-								<select ng-model="row.state" ng-change="row.cities=tableDemo.findCities(row.states,row.state)" ng-if="row.country">
+								<select class="form-control" ng-model="row.state" ng-change="row.cities=tableDemo.findCities(row.states,row.state)" ng-if="row.country">
 									<option ng-repeat="state in row.states">{{state.state}}</option>
+									<option></option>
 								</select>
 							</td>
 							<td>
-								<select ng-model="row.city" ng-change="" ng-if="row.state&&row.country">
+								<select class="form-control" ng-model="row.city" ng-change="" ng-if="row.state&&row.country">
 									<option ng-repeat="city in row.cities">{{city}}</option>
+									<option></option>
 								</select>
 							</td>
 
