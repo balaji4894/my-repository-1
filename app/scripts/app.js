@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mgo-angular-wizard' 
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -42,6 +43,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about',
         activetab:'about'
+      })
+      .when('/angular-wizard', {
+        templateUrl: 'views/wizard.html',
+        controller: 'WizardCtrl',
+        controllerAs: 'wiz',
+        activetab:'wizard'
       })
       .otherwise({
         redirectTo: '/'

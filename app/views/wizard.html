@@ -1,0 +1,23 @@
+<h1>Angular Wizard coming here</h1>
+
+<wizard on-finish="finishedWizard()"> 
+    <wz-step wz-title="Starting">
+        <!-- <h1>This is the first step</h1>
+        <p>Here you can use whatever you want. You can use other directives, binding, etc.</p> -->
+        <div ng-include src="'views/templates/step1.html'"></div>
+        <input type="submit" wz-next value="Next" />
+    </wz-step>
+    <wz-step wz-title="Continuing">
+        <!-- <h1>Continuing</h1>
+        <p>You have continued here!</p> -->
+        <div ng-include src="'views/templates/step2.html'"></div>
+        <input type="submit" wz-previous value="Previos" />
+        <input type="submit" wz-next value="Next" />
+    </wz-step>
+    <wz-step wz-title="More steps">
+        <!-- <p>Even more steps!!</p> -->
+        <div ng-include src="'views/templates/step3.html'"></div>
+        <input type="submit" wz-previous value="Previos" />
+        <input type="submit" wz-next value="Finish" />
+    </wz-step>
+</wizard>
